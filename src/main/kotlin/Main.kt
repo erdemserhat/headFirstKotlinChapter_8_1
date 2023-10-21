@@ -1,3 +1,7 @@
+import jdk.jshell.spi.ExecutionControl.ExecutionControlException
+import java.lang.Exception
+import javax.swing.text.BadLocationException
+
 fun main(args: Array<String>) {
 
     //Setting default values for null values by using if expression
@@ -31,6 +35,50 @@ fun main(args: Array<String>) {
     //Basically  The Elvis Operator ?: is a safe version of an if expression.
     //It returns the value of its left if that is not null. [myInstagramPassword.passwordContent]
     //Otherwise , it returns the value on its right. ["it was null"]
+
+    data class Person(
+        val name:String?,
+        val surname:String?
+    )
+    val person:Person?=Person("Ali","Erdem")
+
+    var name:String?
+
+    //if person and person's name are not null assign person's name property (it) to name variable
+    person?.name?.let {
+        name=it
+    }
+
+    //NOT-NULL ASSERTION OPERATOR
+    //The !! operator deliberately throws a NullPointerException
+    //it is a good tool to test your code
+
+    var x:String?=null
+    //It is clear that x variable refers nothing so it is null.
+    //and of course, if you want to call a function of null object
+    //compiler gets upset like this;
+   // println(x.length)
+
+    //But if you want to take responsibility of error you can assert it is not null
+    //by using not-null assertion operator (!!)
+
+    //println(x!!.length)
+    //So because it is null you are going to see NullPointerException
+    val q: Nothing? =null
+
+
+    fun fail():Nothing{
+        throw Exception("12")
+    }
+
+    fail()
+
+
+
+
+
+
+
 
 
 
