@@ -1,4 +1,5 @@
 import jdk.jshell.spi.ExecutionControl.ExecutionControlException
+import java.lang.ArithmeticException
 import java.lang.Exception
 import javax.swing.text.BadLocationException
 
@@ -71,7 +72,59 @@ fun main(args: Array<String>) {
         throw Exception("12")
     }
 
-    fail()
+    //Important Notes;
+    //If there is a error in try block below code after the error will not be tried..
+    //finally block will be work whether there is an exception or not.
+
+
+/**
+
+    try{
+        var a:Int?=1/0
+
+    }catch (ex:ArithmeticException){
+        ex.printStackTrace()
+    }finally {
+        System.err.println("Finally block has been started")
+    }
+    */
+
+    //as? keyword
+
+    data class MyPerson(
+        val name:String,
+        val surname:String,
+        val age:Int
+    )
+
+
+    var myPerson:MyPerson = MyPerson("Serhat","Erdem",22);
+
+    //In the below code, we make a type casting error intentionally
+
+    var myName:String?= myPerson as? String?
+    //this is like saying if myPerson is String then return myPerson
+    //but if it is not, return null...
+
+  //If
+    fun exampleFun(x:Int){
+        if( x !in 0..100){
+            println(x)
+        }
+    }
+
+    exampleFun(44)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
