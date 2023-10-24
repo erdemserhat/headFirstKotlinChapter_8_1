@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79f2c93c-5f49-4aab-89b1-67744fedbbe8" name="Changes" comment="-Elvis Operator&#10;Not-null assertion operator&#10;-Try/catch&#10;-as? operator&#10;-try catcs -expressions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +61,7 @@
       <workItem from="1697899871833" duration="5461000" />
       <workItem from="1697906232050" duration="59000" />
       <workItem from="1698140031882" duration="2392000" />
-      <workItem from="1698162733393" duration="358000" />
+      <workItem from="1698162733393" duration="807000" />
     </task>
     <task id="LOCAL-00001" summary="-Elvis Operator&#10;Not-null assertion operator">
       <option name="closed" value="true" />
@@ -80,7 +79,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697906283486</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="-Elvis Operator&#10;Not-null assertion operator&#10;-Try/catch&#10;-as? operator&#10;-try catcs -expressions">
+      <option name="closed" value="true" />
+      <created>1698163172074</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698163172074</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

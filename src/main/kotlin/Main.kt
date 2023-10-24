@@ -1,6 +1,7 @@
 import jdk.jshell.spi.ExecutionControl.ExecutionControlException
 import java.lang.ArithmeticException
 import java.lang.Exception
+import java.lang.IllegalArgumentException
 import javax.swing.text.BadLocationException
 
 fun main(args: Array<String>) {
@@ -92,13 +93,13 @@ fun main(args: Array<String>) {
     //as? keyword
 
     data class MyPerson(
-        val name:String,
-        val surname:String,
-        val age:Int
+    var name:String?,
+    val surname:String,
+    val age:Int
     )
 
 
-    var myPerson:MyPerson = MyPerson("Serhat","Erdem",22);
+    var myPerson:MyPerson? = MyPerson("Serhat","Erdem",22);
 
     //In the below code, we make a type casting error intentionally
 
@@ -113,7 +114,21 @@ fun main(args: Array<String>) {
         }
     }
 
-    exampleFun(44)
+    exampleFun(1212)
+
+
+    myPerson?.name=null
+    try {
+
+        //Super :)
+        var myStringVariable:String?=myPerson?.name?:throw IllegalArgumentException("Error.....")
+    }catch (ex:IllegalArgumentException){
+        ex.printStackTrace()
+    }finally {
+        println("executed")
+    }
+
+
 
 
 
